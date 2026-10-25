@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru" style="--accent: #2563eb;"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Конструктор резюме студента</title>
+<style>
+:root{--accent:#2563eb;--ink:#202938;--muted:#657185;--line:#dfe6ef;--bg:#f1f5f9;--panel:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 Arial,Helvetica,sans-serif}
+.app{max-width:1200px;margin:auto;padding:22px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+h1{font-size:25px;margin:0 0 4px}.sub{color:var(--muted);margin:0}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+button,select{font:inherit;border-radius:9px;border:1px solid var(--line);padding:10px 12px;background:white;color:var(--ink);cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:white}
+.layout{display:grid;grid-template-columns:minmax(290px,390px) minmax(0,1fr);gap:18px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:19px}
+.panel h2{font-size:16px;margin:0 0 14px}
+label{display:block;font-weight:700;font-size:12px;margin:12px 0 5px;color:#4a5669}
+input,textarea,select.field{width:100%;padding:10px 11px;border:1px solid #d6deea;border-radius:8px;font:inherit;color:var(--ink);background:white}
+textarea{min-height:76px;resize:vertical}
+.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+.help{font-size:12px;color:var(--muted);margin-top:5px}
+.preview-wrap{position:sticky;top:12px}
+.resume{background:white;min-height:750px;box-shadow:0 10px 28px #1e293b12;border-radius:12px;overflow:hidden}
+.resume-header{padding:32px 36px;background:var(--accent);color:white}
+.resume-header h2{font-size:32px;line-height:1.15;margin:0 0 7px;color:inherit;letter-spacing:0}
+.resume-header .role{font-size:16px;margin:0;color:#edf4ff}
+.contact{display:flex;gap:6px 17px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:#f4f7ff}
+.resume-main{display:grid;grid-template-columns:1.55fr 1fr;gap:28px;padding:28px 36px}
+.resume section{margin-bottom:22px;min-width:0}
+.resume h3{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);border-bottom:2px solid var(--line);padding-bottom:7px;margin:0 0 10px}
+.resume p{margin:0 0 8px;white-space:pre-line;overflow-wrap:anywhere}
+.resume ul{margin:5px 0 0;padding-left:18px}.resume li{margin:4px 0}
+.smallmuted{font-size:12px;color:var(--muted)}
+.taglist{display:flex;gap:6px;flex-wrap:wrap}
+.tag{background:#eef4ff;color:#244c8f;border-radius:6px;padding:4px 7px;font-size:11px}
+.resume.minimal .resume-header{background:white;color:#172033;border-bottom:3px solid var(--accent)}
+.resume.minimal .resume-header .role,.resume.minimal .contact{color:#526074}
+.resume.minimal .tag{background:white;border:1px solid var(--line);color:#26364d}
+.resume.creative .resume-header{background:#142f2b;border-left:12px solid #e5a94e}
+.resume.creative h3{color:#17675b}
+.resume.creative .tag{background:#e9f5ef;color:#17584d}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.preview-wrap{position:static}.resume-main{padding:23px;gap:18px}.resume-header{padding:26px 23px}}
+@media(max-width:540px){.app{padding:12px}.resume-main{grid-template-columns:1fr}.resume-header h2{font-size:27px}.fields-grid{grid-template-columns:1fr}.panel{padding:14px}}
+@media print{body{background:white}.app{max-width:none;padding:0}.top,.editor{display:none!important}.layout{display:block}.preview-wrap{position:static}.resume{box-shadow:none;border-radius:0}.resume-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+body{background:white;padding:0}.app{padding:0;max-width:none}.layout{display:block}.preview-wrap{position:static}.resume{box-shadow:none}</style>
+</head>
+<body>
+<div class="app">
+  
+  <div class="layout">
+    
+
+    <div class="preview-wrap">
+      <article id="resume" class="resume modern" style="margin: 0px auto;">
+        <header class="resume-header">
+          <h2 id="out-name">Максуд Бабаджанов</h2>
+          <p class="role" id="out-role">Студент второго курса · Начинающий специалист</p>
+          <div class="contact" id="out-contact"><span>📍 Бустон</span><span>☎ +992919200100</span><span>✉ maksud141207@gmail.com</span></div>
+        </header>
+        <div class="resume-main">
+          <div>
+            <section><h3>О себе</h3><p id="out-about">Студент второго курса, заинтересованный в получении практического опыта и профессиональном развитии.</p></section>
+            <section style="display: none;"><h3>Образование</h3><p id="out-school">Технологический университет</p><p id="out-specialty">ИИ</p><p class="smallmuted" id="out-years">2025-2029</p><p id="out-education"></p></section>
+            <section style="display: none;"><h3>Опыт и проекты</h3><p id="out-experience"></p></section>
+            <section><h3>Профессиональная цель</h3><p id="out-goal">Получить первую профессиональную возможность, развить практические навыки и приносить пользу команде, совмещая работу с обучением.</p></section>
+          </div>
+          <aside>
+            <section><h3>Ключевые навыки</h3><div id="out-skills" class="taglist"><span class="tag">Ответственность</span><span class="tag">Обучаемость</span><span class="tag">Пунктуальность</span><span class="tag">Коммуникация</span></div></section>
+            <section style=""><h3>Компьютерные навыки</h3><p id="out-computer">Работа с C++</p></section>
+            <section><h3>Языки</h3><p id="out-languages">Таджикский — базовый 
+Русский — носитель</p></section>
+          </aside>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+</body></html>
